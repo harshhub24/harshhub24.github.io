@@ -70,7 +70,7 @@
     $("#statProjects").textContent = stats.projects;
     $("#statCerts").textContent = stats.certificates;
     $("#statCategories").textContent = stats.categories;
-    $("#statYears").textContent = new Date().getFullYear() - 2022;
+    $("#statYears").textContent = new Date().getFullYear() - 2025;
 
     $("#featuredProjects").innerHTML = (projects || []).slice(0, 3).map(projectCard).join("")
       || `<div class="empty">No featured projects yet.</div>`;
