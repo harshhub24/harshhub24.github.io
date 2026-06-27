@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog — Portfolio</title>
+<meta name="description" content="Selected projects and certificates by a student developer.">
+<meta name="keywords" content="portfolio, student, developer, projects, certificates">
+<meta name="robots" content="index, follow">
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog — Portfolio">
+<meta property="og:description" content="Selected projects and certificates by a student developer.">
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog — Portfolio">
+<meta name="twitter:description" content="Selected projects and certificates by a student developer.">
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+
+  <link rel="stylesheet" href="css/public.css">
+</head>
+<body>
+  
+  <header class="nav" id="siteNav">
+  <div class="container nav-inner">
+    <a class="nav-brand" href="/"><span class="dot"></span> Portfolio</a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/" >Home</a>
+      <a href="/projects" >Projects</a>
+      <a href="/certificates" >Certificates</a>
+      <a href="/blog" aria-current="page">Blog</a>
+      <a href="/contact" class="nav-cta" >Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <article class="section post-shell">
+    <div class="container post-container">
+      <a class="back-link" href="/blog">← Back to blog</a>
+      <div id="postRoot" aria-live="polite">
+        <p class="muted">Loading post…</p>
+      </div>
+
+      <section class="post-actions" hidden id="postActions">
+        <button id="likeBtn" class="btn btn-primary" type="button" aria-pressed="false">
+          <span aria-hidden="true">♥</span> <span id="likeLabel">Like</span>
+          <span class="like-count" id="likeCount">0</span>
+        </button>
+      </section>
+
+      <section class="comments" hidden id="commentsSection">
+        <h2>Comments <span class="muted" id="commentCount"></span></h2>
+        <ul id="commentList" class="comment-list"></ul>
+
+        <form id="commentForm" class="comment-form" novalidate>
+          <h3>Leave a comment</h3>
+          <div class="field">
+            <label for="cName">Name <span class="muted">(optional)</span></label>
+            <input id="cName" name="name" maxlength="80" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="cContent">Comment</label>
+            <textarea id="cContent" name="content" required minlength="2" maxlength="2000" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Post comment</button>
+        </form>
+      </section>
+    </div>
+  </article>
+
+  <footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div style="font-family:var(--font-display);font-weight:700;color:#fff;margin-bottom:6px">Portfolio</div>
+      <div style="opacity:.6;font-size:.88rem">© <span id="year"></span> · Built with Flask + vanilla JS.</div>
+    </div>
+    <nav style="display:flex;gap:24px;font-size:.92rem">
+      <a href="/">Home</a><a href="/projects">Projects</a>
+      <a href="/certificates">Certificates</a><a href="/contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+  <script>window.POST_SLUG = "";</script>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/post_detail.js"></script>
+</body>
+</html>

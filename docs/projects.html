@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Portfolio</title>
+<meta name="description" content="Selected projects and certificates by a student developer.">
+<meta name="keywords" content="portfolio, student, developer, projects, certificates">
+<meta name="robots" content="index, follow">
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projects — Portfolio">
+<meta property="og:description" content="Selected projects and certificates by a student developer.">
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Projects — Portfolio">
+<meta name="twitter:description" content="Selected projects and certificates by a student developer.">
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+
+  <link rel="stylesheet" href="css/public.css">
+</head>
+<body>
+  
+  <header class="nav" id="siteNav">
+  <div class="container nav-inner">
+    <a class="nav-brand" href="/"><span class="dot"></span> Portfolio</a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/" >Home</a>
+      <a href="/projects" aria-current="page">Projects</a>
+      <a href="/certificates" >Certificates</a>
+      <a href="/blog" >Blog</a>
+      <a href="/contact" class="nav-cta" >Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <section class="page-hero" data-nav-dark>
+    <div class="container">
+      <span class="eyebrow">Portfolio</span>
+      <h1>Projects</h1>
+      <p>Everything I've shipped — side projects, school work, and open-source contributions.</p>
+      <p><button class="btn btn-ghost on-dark" type="button" data-download-pdf>Download PDF</button></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filter-bar">
+        <input id="searchInput" type="search" placeholder="Search projects…" aria-label="Search projects">
+        <select id="categorySelect" aria-label="Filter by category"><option value="">All categories</option></select>
+      </div>
+      <div id="projectGrid" class="grid grid-3"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div style="font-family:var(--font-display);font-weight:700;color:#fff;margin-bottom:6px">Portfolio</div>
+      <div style="opacity:.6;font-size:.88rem">© <span id="year"></span> · Built with Flask + vanilla JS.</div>
+    </div>
+    <nav style="display:flex;gap:24px;font-size:.92rem">
+      <a href="/">Home</a><a href="/projects">Projects</a>
+      <a href="/certificates">Certificates</a><a href="/contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/pdf.js"></script>
+</body>
+</html>

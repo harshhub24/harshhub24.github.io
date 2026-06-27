@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home — Portfolio</title>
+<meta name="description" content="Selected projects and certificates by a student developer.">
+<meta name="keywords" content="portfolio, student, developer, projects, certificates">
+<meta name="robots" content="index, follow">
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Home — Portfolio">
+<meta property="og:description" content="Selected projects and certificates by a student developer.">
+
+
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Home — Portfolio">
+<meta name="twitter:description" content="Selected projects and certificates by a student developer.">
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/animations.css">
+
+  <link rel="stylesheet" href="css/public.css">
+</head>
+<body>
+  
+  <header class="nav on-dark" id="siteNav">
+  <div class="container nav-inner">
+    <a class="nav-brand" href="/"><span class="dot"></span> Portfolio</a>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span></button>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="/" aria-current="page">Home</a>
+      <a href="/projects" >Projects</a>
+      <a href="/certificates" >Certificates</a>
+      <a href="/blog" >Blog</a>
+      <a href="/contact" class="nav-cta" >Contact</a>
+    </nav>
+  </div>
+</header>
+
+
+  <section class="hero" data-nav-dark>
+    <div class="container">
+      <span class="eyebrow">Student Developer Portfolio</span>
+      <h1>Hi, I'm <span id="heroName" class="grad">…</span><br><span id="heroTitle">…</span></h1>
+      <p class="lead" id="heroTagline">…</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="/projects">View projects →</a>
+        <a class="btn btn-ghost on-dark" href="/contact">Get in touch</a>
+        <button class="btn btn-ghost on-dark" type="button" data-download-pdf>Download PDF</button>
+      </div>
+      <div class="hero-meta">
+        <div><strong id="statProjects">—</strong> Projects shipped</div>
+        <div><strong id="statCerts">—</strong> Certifications</div>
+        <div><strong id="statYears">—</strong> Years coding</div>
+        <div><strong id="statCategories">—</strong> Years coding</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Toolkit</span>
+          <h2 class="section-title reveal">Skills &amp; technologies</h2>
+          <p class="section-lede reveal">A snapshot of the languages, frameworks, and tools I reach for most often.</p>
+        </div>
+      </div>
+      <div id="skills" class="grid grid-4"></div>
+    </div>
+  </section>
+
+  <section class="section" style="background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Selected work</span>
+          <h2 class="section-title reveal">Featured projects</h2>
+          <p class="section-lede reveal">Things I've built end-to-end — from data model to interface.</p>
+        </div>
+        <div class="right"><a class="btn btn-ghost" href="/projects">Browse all →</a></div>
+      </div>
+      <div id="featuredProjects" class="grid grid-3"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Credentials</span>
+          <h2 class="section-title reveal">Recent certificates</h2>
+          <p class="section-lede reveal">Verified coursework and certifications.</p>
+        </div>
+        <div class="right"><a class="btn btn-ghost" href="/certificates">All certificates →</a></div>
+      </div>
+      <div id="featuredCerts" class="grid grid-3"></div>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="container">
+      <div class="stats-band reveal">
+        <div class="stat"><div class="stat-num" id="statProjectsB">—</div><div class="stat-label">Projects</div></div>
+        <div class="stat"><div class="stat-num" id="statCertsB">—</div><div class="stat-label">Certificates</div></div>
+        <div class="stat"><div class="stat-num" id="statCategoriesB">—</div><div class="stat-label">Categories</div></div>
+        <div class="stat"><div class="stat-num">∞</div><div class="stat-label">Curiosity</div></div>
+      </div>
+    </div>
+    <script>
+      // Mirror header stats into band when they hydrate.
+      const mo = new MutationObserver(()=>{
+        document.getElementById('statProjectsB').textContent = document.getElementById('statProjects').textContent;
+        document.getElementById('statCertsB').textContent = document.getElementById('statCerts').textContent;
+      });
+      mo.observe(document.getElementById('statProjects'), {childList:true});
+      mo.observe(document.getElementById('statCerts'), {childList:true});
+    </script>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about">
+        <div>
+          <span class="eyebrow">About</span>
+          <h2 class="section-title reveal">A bit about me</h2>
+          <p class="reveal" id="aboutBio" style="font-size:1.05rem;color:var(--text-dark);max-width:600px">…</p>
+          <div id="socials" class="social-row" style="margin-top:24px"></div>
+        </div>
+        <dl class="about-card reveal">
+          <dt>Location</dt><dd id="aboutLocation">—</dd>
+          <dt>Email</dt><dd id="aboutEmail">—</dd>
+          <dt>Open to</dt><dd>Internships, freelance, open-source collabs.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="container">
+      <div class="cta-band reveal">
+        <h2>Have a project in mind? Let's build it together.</h2>
+        <a class="btn btn-primary" href="/contact">Start a conversation →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div style="font-family:var(--font-display);font-weight:700;color:#fff;margin-bottom:6px">Portfolio</div>
+      <div style="opacity:.6;font-size:.88rem">© <span id="year"></span> · Built with Flask + vanilla JS.</div>
+    </div>
+    <nav style="display:flex;gap:24px;font-size:.92rem">
+      <a href="/">Home</a><a href="/projects">Projects</a>
+      <a href="/certificates">Certificates</a><a href="/contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+
+
+  <script>
+    // Sync stat band with computed stats once available (in addition to MutationObserver above).
+    window.addEventListener("load", () => {
+      const cats = document.getElementById("statCategoriesB");
+      if (cats && cats.textContent === "—") {
+        fetch("/api/stats").then(r=>r.json()).then(j=>{ if(j.ok) cats.textContent = j.data.categories; });
+      }
+    });
+  </script>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/pdf.js"></script>
+</body>
+</html>
