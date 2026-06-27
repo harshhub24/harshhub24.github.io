@@ -7,4 +7,4 @@
 //   window.API_BASE = "https://your-backend.onrender.com";
 //
 // The backend must also set CORS_ORIGINS to include this frontend's origin.
-window.API_BASE = "";
+window.API_BASE = "https://harshhub.pythonanywhere.com";
