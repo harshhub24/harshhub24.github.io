@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src &#39;self&#39;; script-src &#39;self&#39;; style-src &#39;self&#39;; img-src &#39;self&#39; data: https: https://harshhub.pythonanywhere.com; font-src &#39;self&#39;; connect-src &#39;self&#39; https://harshhub.pythonanywhere.com; object-src &#39;none&#39;; base-uri &#39;self&#39;; form-action &#39;self&#39;">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Contact — Harsh Kumar Swarnkar | Student &amp; Tech Enthusiast</title>
+<meta name="description" content="Send a message or request a quote.">
+<meta name="keywords" content="Harsh Kumar Swarnkar, Python beginner, student portfolio, Microsoft Excel, Word, PowerPoint, technology">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a1020">
+<link rel="canonical" href="https://harshhub24.github.io/contact/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Harsh Kumar Swarnkar | Student &amp; Tech Enthusiast">
+<meta property="og:title" content="Contact — Harsh Kumar Swarnkar | Student &amp; Tech Enthusiast">
+<meta property="og:description" content="Send a message or request a quote.">
+<meta property="og:url" content="https://harshhub24.github.io/contact/">
+<meta property="og:image" content="https://harshhub.pythonanywhere.com/uploads/c1afed1d0d712bd3a3a9ae28127540d2.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/" id="brandLink">Harsh Kumar Swarnkar | Student &amp; Tech Enthusiast</a>
+    <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="navLinks">
+        
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/projects/">Projects</a></li>
+        
+        <li><a href="/services/">Services</a></li>
+        
+        <li><a href="/about/">About</a></li>
+        
+        <li><a href="/certificates/">Certificates</a></li>
+        
+        <li class="nav-cta"><a href="/contact/" aria-current="page">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+
+<section class="page-hero"><div class="container"><span class="eyebrow">Contact</span><h1>Get in touch</h1><p>Tell me about your project or question. I'll reply by email.</p></div></section>
+<section class="band on-light"><div class="container two-col">
+  <div class="form-card">
+    <div id="success" class="alert alert-success" role="status" tabindex="-1" hidden><strong>Message received.</strong> Thanks, I'll get back to you by email.</div>
+    <form id="contactForm" novalidate>
+      <div id="formError" class="alert alert-error" role="alert" tabindex="-1" hidden></div>
+      <p id="enquiry" class="hint" hidden></p>
+      <input type="hidden" name="service" id="service">
+      <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required minlength="2" maxlength="100" aria-describedby="name-err"><div class="error-text" id="name-err"></div></div>
+      <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="255" aria-describedby="email-err"><div class="error-text" id="email-err"></div></div>
+      <div class="field"><label for="subject">Subject <span class="hint">(optional)</span></label><input id="subject" name="subject" maxlength="150" aria-describedby="subject-err"><div class="error-text" id="subject-err"></div></div>
+      <div class="field"><label for="message">Message</label><textarea id="message" name="message" required minlength="10" maxlength="2000" aria-describedby="message-err message-hint"></textarea><div class="hint" id="message-hint"><span id="counter">0</span> / 2000</div><div class="error-text" id="message-err"></div></div>
+      <div class="hp" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+      <button class="btn btn-primary" id="send" type="submit">Send message</button>
+    </form>
+  </div>
+  <aside class="card"><h3>Other ways to reach me</h3><p id="direct" class="muted">Use the form and I'll reply by email.</p><ul class="footer-links" id="directSocials"></ul></aside>
+</div></section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <strong>Harsh Kumar Swarnkar | Student &amp; Tech Enthusiast</strong>
+        <ul class="footer-links" id="footerSocials" aria-label="Social links"></ul>
+      </div>
+      <ul class="footer-links" aria-label="Footer">
+        <li><a href="/">Home</a></li><li><a href="/projects/">Projects</a></li><li><a href="/services/">Services</a></li><li><a href="/about/">About</a></li><li><a href="/certificates/">Certificates</a></li><li><a href="/contact/">Contact</a></li>
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
+    <p class="footer-note">© 2026 Harsh Kumar Swarnkar | Student &amp; Tech Enthusiast. All rights reserved.</p>
+  </div>
+</footer>
+<div class="toast-region" id="toastRegion" role="status" aria-live="polite"></div>
+<script src="/js/config.js"></script>
+<script src="/js/core.js"></script>
+<script src="/js/contact.js"></script>
+</body>
+</html>
