@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-# If you set a custom domain, uncomment and edit:
-# Sitemap: https://yourname.github.io/sitemap.xml
